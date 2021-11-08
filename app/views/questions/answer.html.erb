@@ -1,0 +1,13 @@
+<h1>Stupid Coaching</h1>
+
+<p><%= @question %></p>
+<p><em>--You</em></p>
+<%if (@question == "I am going to work") %>
+<%= @answer[0]%>
+<%elsif (@question.include? "?")%>
+<%= @answer[1]%>
+<%else%>
+<%= @answer[2]%>
+<%end%>
+<p><em>--Your coach</em></p>
+<%= link_to 'ask another question', ask_path %>
